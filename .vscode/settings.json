@@ -4,5 +4,46 @@
     "**/bower_components": true,
     "**/.sf": true,
     "**/.sfdx": true
-  }
+  },
+
+  // Salesforce / Apex
+  "salesforcedx-vscode-apex.java.home": "C:\\Program Files\\Java\\jdk-17",
+  "salesforcedx-vscode-core.retrieve-test-code-coverage": true,
+  "salesforcedx-vscode-apex.pmd.enabled": true,
+  "salesforcedx-vscode-apex.pmd.rulesets": [
+    "${workspaceFolder}/config/pmd/ruleset.xml"
+  ],
+
+  // Editor basics
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": true,
+
+  // Tell VS Code to use Prettier for Apex
+  "[apex]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // JS/TS/LWC etc (optional, but fine)
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Prettier
+  "prettier.requireConfig": true,
+  "prettier.documentSelectors": ["**/*.{cls,trigger}"]
 }
