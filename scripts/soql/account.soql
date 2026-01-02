@@ -3,4 +3,19 @@
 //     query text and running the command:
 //     SFDX: Execute SOQL Query with Currently Selected Text
 
-SELECT Id, Name FROM Account
+SELECT Id, Name, Department, Title, Phone, Email FROM Contact WHERE Title LIKE '%VP%' AND Department = 'Finance' ORDER By Name DESC LIMIT 3
+
+-- Get all Users
+SELECT Id, Name, Email, Profile.Name FROM User WHERE IsActive = true ORDER BY Name
+
+-- Get all Users with family name "smith"
+
+SELECT Id, Name, Email, Profile.Name FROM User WHERE LastName = 'Smith' ORDER BY Name
+
+-- get all accounts that have at least one Contact
+
+SELECT Id, Name, (SELECT Id, Name FROM Contacts) FROM Account WHERE Id IN (SELECT AccountId FROM Contact) ORDER BY Name
+
+-- get all layout assignment for system admin Profile
+
+SELECT Id, Layout.Name, Profile.Name FROM LayoutAssignment WHERE Profile.Name = 'System Administrator'
