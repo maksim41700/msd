@@ -45,5 +45,17 @@
 
   // Prettier
   "prettier.requireConfig": true,
-  "prettier.documentSelectors": ["**/*.{cls,trigger}"]
+  "prettier.documentSelectors": ["**/*.{cls,trigger}"],
+
+  // GitHub Copilot
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Add emojis to the commit message to make it more engaging and visually funny."
+    }
+  ],
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "text": "Use single quotes for strings."
+    }
+  ]
 }
